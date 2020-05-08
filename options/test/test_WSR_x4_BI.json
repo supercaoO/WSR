@@ -1,0 +1,56 @@
+{
+    "mode": "sr",
+    "gpu_ids": [0],
+
+    "scale": 4,
+    "degradation": "BI",
+    "is_train": false,
+    "use_chop": true,
+    "rgb_range": 255,
+    "self_ensemble": false,
+
+    "datasets": {
+        "test_set1": {
+            "mode": "LRHR",
+            "dataroot_HR": "./results/HR/Set5/x4",
+            "dataroot_LR": "./results/LR/LRBI/Set5/x4",
+            "data_type": "img"
+        },
+        "test_set2": {
+            "mode": "LRHR",
+            "dataroot_HR": "./results/HR/Set14/x4",
+            "dataroot_LR": "./results/LR/LRBI/Set14/x4",
+            "data_type": "img"
+        },
+        "test_set3": {
+            "mode": "LRHR",
+            "dataroot_HR": "./results/HR/B100/x4",
+            "dataroot_LR": "./results/LR/LRBI/B100/x4",
+            "data_type": "img"
+        },
+        "test_set4": {
+            "mode": "LRHR",
+            "dataroot_HR": "./results/HR/Urban100/x4",
+            "dataroot_LR": "./results/LR/LRBI/Urban100/x4",
+            "data_type": "img"
+        },
+        "test_set5": {
+            "mode": "LRHR",
+            "dataroot_HR": "./results/HR/Manga109/x4",
+            "dataroot_LR": "./results/LR/LRBI/Manga109/x4",
+            "data_type": "img"
+        }
+    },
+
+    "networks": {
+        "which_model": "WSR",
+        "num_features": 64,
+        "in_channels": 3,
+        "out_channels": 3,
+        "num_groups": 10
+    },
+
+    "solver": {
+        "pretrained_path": "./experiments/WSR_in3f64_x4/epochs/best_ckp.pth"
+    }
+}

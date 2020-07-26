@@ -1,4 +1,4 @@
-# Towards Lighter and Faster: Learning Wavelets Progressively for Image Super-Resolution
+# Towards Lighter and Faster: Learning Wavelets Progressively for Image Super-Resolution (accepted by ACMMM2020)
 
 This repository is official PyTorch implement for our proposed WSR.
 The code is developed by [supercaoO (Huanrong Zhang)](https://github.com/supercaoO) based on [SRFBN_CVPR19](https://github.com/Paper99/SRFBN_CVPR19).

@@ -14,7 +14,7 @@ In addition, we propose a deformable convolution kernel (side window) to constru
 which is the basic unit of the recurrent blocks (RBs).
 Moreover, we train WSR with loss constraints at wavelet and spatial domains.
 
-![](figs/framework.jpg)
+![](figs/framework.png)
 
 The RNN-based framework of our proposed 4× WSR.
 Notice that two recurrent blocks (RBs) share the same set of weights.

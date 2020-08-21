@@ -1,7 +1,10 @@
 # Towards Lighter and Faster: Learning Wavelets Progressively for Image Super-Resolution (accepted by ACMMM2020)
 
-This repository is official PyTorch implement for our proposed WSR.
+This repository is the official PyTorch implementation for our proposed WSR.
 The code is developed by [supercaoO (Huanrong Zhang)](https://github.com/supercaoO) based on [SRFBN_CVPR19](https://github.com/Paper99/SRFBN_CVPR19).
+In the future, the update will be released in [supercaoO/WSR](https://github.com/supercaoO/WSR) first.
+
+![](figs/sample.gif)
 
 ## Introduction
 
@@ -20,17 +23,17 @@ The RNN-based framework of our proposed 4× WSR.
 Notice that two recurrent blocks (RBs) share the same set of weights.
 The details about our proposed S-IMDB can be found in [our main paper (waiting for release)]().
 
-<!-- If you find our work useful in your research or publications, please consider citing:
+If you find our work useful in your research or publications, please consider citing:
 
 ```latex
 @inproceedings{zhang2020wsr,
-    author = {Zhang, Huanrong and Zhi, Jin},
+    author = {Zhang, Huanrong and Zhi, Jin and Tan, Xiaojun and Li, Xiying},
     title = {Towards Lighter and Faster: Learning Wavelets Progressively for Image Super-Resolution},
-    booktitle = {Proceedings of the 28th ACM International Conference on Multimedia (MM’20)},
+    booktitle = {Proceedings of the 28th ACM International Conference on Multimedia (ACM MM)},
     year= {2020}
 }
 ```
--->
+
 
 ## Contents
 1. [Requirements](#Requirements)
@@ -129,24 +132,24 @@ The inference time is measured on B100 dataset (100 images) using Intel(R) Xeon(
 
 #### Quantitative Results
 
-![](figs/comp_sota.jpg)
-Comparisons on the number of network parameters, inference time, and PSNR/SSIM of different 4x SR methods. Best
-PSNR/SSIM results are highlighted.
+![](figs/comp_sota.png)
+Comparisons on the number of network parameters, inference time, and PSNR/SSIM of different 4× SR methods. Best and second best
+PSNR/SSIM results are marked in red and blue, respectively.
 
-![](figs/comp_sota_2.jpg)
-Comparisons on the number of network parameters and inference time of different 4x SR methods. Best results are
+![](figs/comp_sota_2.png)
+Comparisons on the number of network parameters and inference time of different 4× SR methods. Best results are
 highlighted. Notice that the compared methods achieve better PSNR/SSIM results than our WSR does.
 
 #### Qualitative Results
 
 ![](figs/visual_comp.png)
-Visual comparisons with different 4x SR advances on “img018” and “img024” from Urban100 dataset. The inference time is CPU time.
+Visual comparisons with different 4× SR advances on “img018” and “img024” from Urban100 dataset. The inference time is CPU time.
 
 #### Trade-off Results
 
 ![](figs/trade_off_results.png)
-Trade-off between the number of network parameters, inference time, and reconstruction performance of different
-4x SR advances. The color represents PSNR achieved by different 4× networks on B100 dataset. The inference time in left figure is CPU time and that in right figure is GPU time.
+Relationship between the number of network parameters, inference time, and reconstruction performance of different
+4× SR advances. The color represents PSNR achieved by different 4× networks on B100 dataset. The inference time in left figure is CPU time and that in right figure is GPU time.
 
 ## TODO
 

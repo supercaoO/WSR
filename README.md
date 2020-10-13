@@ -1,4 +1,4 @@
-# Towards Lighter and Faster: Learning Wavelets Progressively for Image Super-Resolution (accepted by ACMMM2020)
+# Towards Lighter and Faster: Learning Wavelets Progressively for Image Super-Resolution (accepted by ACMMM2020) [[PAPER]](https://dl.acm.org/doi/10.1145/3394171.3413664)
 
 This repository is the official PyTorch implementation for our proposed WSR.
 The code is developed by [supercaoO (Huanrong Zhang)](https://github.com/supercaoO) based on [SRFBN_CVPR19](https://github.com/Paper99/SRFBN_CVPR19).
@@ -21,15 +21,15 @@ Moreover, we train WSR with loss constraints at wavelet and spatial domains.
 
 The RNN-based framework of our proposed 4× WSR.
 Notice that two recurrent blocks (RBs) share the same set of weights.
-The details about our proposed S-IMDB can be found in [our main paper (waiting for release)]().
+The details about our proposed S-IMDB can be found in [our main paper](https://dl.acm.org/doi/10.1145/3394171.3413664).
 
 If you find our work useful in your research or publications, please consider citing:
 
 ```latex
 @inproceedings{zhang2020wsr,
-    author = {Zhang, Huanrong and Zhi, Jin and Tan, Xiaojun and Li, Xiying},
+    author = {Zhang, Huanrong and Jin, Zhi and Tan, Xiaojun and Li, Xiying},
     title = {Towards Lighter and Faster: Learning Wavelets Progressively for Image Super-Resolution},
-    booktitle = {Proceedings of the 28th ACM International Conference on Multimedia (ACM MM)},
+    booktitle = {Proceedings of the 28th ACM International Conference on Multimedia},
     year= {2020}
 }
 ```

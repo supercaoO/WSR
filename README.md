@@ -61,7 +61,7 @@ If you find our work useful in your research or publications, please consider ci
 1. Clone this repository and cd to `WSR`:
 
    ```shell
-   git clone https://github.com/FVL2020/WSR.git
+   git clone https://github.com/supercaoO/WSR.git
    cd WSR
    ```
 

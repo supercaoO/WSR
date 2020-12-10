@@ -1,6 +1,6 @@
 # Description of Train Options
 
-Let us take [`train_WSR.json`](./train_WSR_example.json) as an example. 
+Let us take [`train_WSR.json`](./train_WSR.json) as an example. 
 
 **Note**: Before you run `python train.py -opt options/train/*.json`, please carefully check options: `"scale"`, `"dataroot_HR"`, `"dataroot_LR"`, `"networks"` and `"pretrained_path"` (if `"pretrain"` option is set to `"resume"` or `"finetune"`).
 

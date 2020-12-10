@@ -44,7 +44,7 @@ Let us take [`train_WSR.json`](./train_WSR.json) as an example.
     // networks specifications
     "networks": {
         "which_model": "WSR", // network name
-        "num_features": 4, // number of base feature maps
+        "num_features": 64, // number of base feature maps
         "in_channels": 3, // number of input channels
         "out_channels": 3, // number of output channels
         "num_groups": 10 // number of S-IMDBs (N)

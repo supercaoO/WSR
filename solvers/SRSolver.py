@@ -1,4 +1,4 @@
-﻿import os
+import os
 from collections import OrderedDict
 import pandas as pd
 import numpy as np
@@ -328,10 +328,19 @@ class SRSolver(BaseSolver):
                     self.records = checkpoint['records']
 
             else:
-                checkpoint = torch.load(model_path)
-                if 'state_dict' in checkpoint.keys(): checkpoint = checkpoint['state_dict']
-                load_func = self.model.load_state_dict if isinstance(self.model, nn.DataParallel) \
+                if self.use_gpu:
+                    checkpoint = torch.load(model_path)
+                    if 'state_dict' in checkpoint.keys(): checkpoint = checkpoint['state_dict']
+                    load_func = self.model.load_state_dict if isinstance(self.model, nn.DataParallel) \
                     else self.model.module.load_state_dict
+                else:
+                    checkpoint = torch.load(model_path, map_location=lambda storage, loc: storage)
+                    if 'state_dict' in checkpoint.keys(): checkpoint = checkpoint['state_dict']
+                    checkpoint_cpu = {}
+                    for key in checkpoint.keys():
+                        checkpoint_cpu[key.replace('module.', '')] = checkpoint[key]
+                    checkpoint = checkpoint_cpu
+                    load_func = self.model.load_state_dict
                 load_func(checkpoint)
 
         else:
